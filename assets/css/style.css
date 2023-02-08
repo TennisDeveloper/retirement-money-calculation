@@ -32,6 +32,7 @@ h1 {
 
 h2 {
     color: #F3EED9;
+    text-align: left;
 }
 
 
@@ -72,11 +73,20 @@ h2 {
 
 /*pre-calculator area*/
 .pre_calculator_area {
+    
     display: flex;
-    justify-content: center;
     padding-bottom: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+    text-align: left;
 
 }
 
+ol {
+    margin-inline-start: 20px;
+    padding-inline-start: 40px;
+}
 
-
+a {
+    color: #FFE4E3;
+}
