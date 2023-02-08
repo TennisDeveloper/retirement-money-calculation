@@ -13,6 +13,10 @@ body {
     
 }
 
+p,ol {
+    font-size: 120%;
+}
+
 /* Heading and menu */
 h1 {
     font-family: 'Luxurious Roman', sans-serif;
@@ -33,12 +37,10 @@ h2 {
 
 #menu {
     font-size: 150%;
-
 }
 
 #menu li {
-    
-   
+       
     list-style-type: none;
     display: inline-block;
     font-weight: 500;
@@ -46,7 +48,6 @@ h2 {
     margin-right: 20px;
     padding-top: 50px;
     padding-left: 20px;
-    
 }
 
 #menu a {
@@ -61,3 +62,21 @@ h2 {
 .active {
     border-bottom: 1px solid #FFE4E3;
 }
+
+/*image at the index page*/
+#image_index_page {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+/*pre-calculator area*/
+.pre_calculator_area {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+
+}
+
+
+
