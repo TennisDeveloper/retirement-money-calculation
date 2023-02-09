@@ -43,7 +43,7 @@
 
     <!--Following div contains form where user could select the attributes for calculation of his/her retirement money-->
     <div class="calculator_area">
-        <form>
+        <form id="calculator_area_1">
             <label for="money_in_retirement" class="label_style">How much money do you need in retirement? </label>
             <select name="money_in_retirement" id="money_in_retirement" class="select_option">
                 <option value="100000">100k</option>
@@ -112,7 +112,7 @@
                 <option value="100%">100%</option>
             </select>
 
-            <button class="submit">Calculate</button>
+            <button data-type="calculate_1" class="submit">Calculate</button>
             
             <!--Response for the calculation will go here-->
             <div id="response1">
@@ -132,7 +132,7 @@
 
     <!--Following div contains form where user could select the attributes for calculation of his/her retirement money-->
     <div class="calculator_area">
-        <form>
+        <form id="calculator_area_2">
             <label for="monthly_investments" class="label_style">How much money you can invest monthly until retirement? </label>
             <select name="monthly_investments" id="monthly_investments" class="select_option">
                 <option value="50">50</option>
@@ -202,7 +202,7 @@
                 <option value="100%">100%</option>
             </select>
 
-            <button class="submit">Calculate</button>
+            <button data-type="calculate_2" class="submit">Calculate</button>
             
             <!--Response for the calculation will go here-->
             <div id="response2">
