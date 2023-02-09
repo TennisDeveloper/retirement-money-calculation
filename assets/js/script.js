@@ -30,17 +30,20 @@ function calculateMonthlyInvestments() {
 
     let monthlyInvestments = Math.floor((moneyInRetirement * (interestRate/12)) / (((1+ interestRate/12)**(yearsUntilRetirement*12))-1));
     
+    let moneyInRetirementFormatted = Intl.NumberFormat().format(moneyInRetirement);
+    let monthlyInvestmentsFormatted = Intl.NumberFormat().format(monthlyInvestments);
+
     let html = `
-        <p>You should invest each month ${monthlyInvestments} units of currency, in order to
-        have in ${yearsUntilRetirement} years ${moneyInRetirement} units of currency of your retirement fund. Check
+        <p>You should invest each month ${monthlyInvestmentsFormatted} units of currency, in order to
+        have in ${yearsUntilRetirement} years ${moneyInRetirementFormatted} units of currency of your retirement fund. Check
         the next tab for more info.</p>
     `;
     
     
     if (yearsUntilRetirement === 1) {
         html = `
-        <p>You should invest each month ${monthlyInvestments} units of currency, in order to
-        have in ${yearsUntilRetirement} year ${moneyInRetirement} units of currency of your retirement fund. Check
+        <p>You should invest each month ${monthlyInvestmentsFormatted} units of currency, in order to
+        have in ${yearsUntilRetirement} year ${moneyInRetirementFormatted} units of currency of your retirement fund. Check
         the next tab for more info.</p>
     `;
     } 
@@ -64,16 +67,19 @@ function calculateRetirementFundAmount() {
 
     let moneyInRetirement2 = Math.floor(((((1 + (interestRate2/12))**(yearsUntilRetirement2 * 12))-1) / (interestRate2/12)) * monthlyInvestments2);
     
+    let moneyInRetirement2Formatted = Intl.NumberFormat().format(moneyInRetirement2);
+    let monthlyInvestments2Formatted = Intl.NumberFormat().format(monthlyInvestments2);
+
     let html_2 = `
-        <p>If you invest each month ${monthlyInvestments2} units of currency for ${yearsUntilRetirement2} years,
-        you could probably have ${moneyInRetirement2} units of currency in your retirement fund. Check
+        <p>If you invest each month ${monthlyInvestments2Formatted} units of currency for ${yearsUntilRetirement2} years,
+        you could probably have ${moneyInRetirement2Formatted} units of currency in your retirement fund. Check
         the next tab for more info.</p>
     `;
 
     if (yearsUntilRetirement2 === 1) {
         html_2 = `
-        <p>If you invest each month ${monthlyInvestments2} units of currency for ${yearsUntilRetirement2} year,
-        you could probably have ${moneyInRetirement2} units of currency in your retirement fund. Check
+        <p>If you invest each month ${monthlyInvestments2Formatted} units of currency for ${yearsUntilRetirement2} year,
+        you could probably have ${moneyInRetirement2Formatted} units of currency in your retirement fund. Check
         the next tab for more info.</p>
     `;
     }

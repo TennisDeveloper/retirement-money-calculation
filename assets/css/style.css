@@ -9,8 +9,7 @@
 body {
     background-color: #2F4858;
     font-family: 'Luxurious Roman', sans-serif;
-    color: #FFE4E3;
-    
+    color: #FFE4E3; 
 }
 
 p,ol {
@@ -64,8 +63,14 @@ h2 {
     border-bottom: 1px solid #FFE4E3;
 }
 
-/*image at the index page*/
+/*image at the index page and investment guide page */
 #image_index_page {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+#image_investment_guide_page {
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
@@ -73,13 +78,11 @@ h2 {
 
 /*pre-calculator area*/
 .pre_calculator_area {
-    
     display: flex;
     padding-bottom: 30px;
     padding-left: 150px;
     padding-right: 150px;
     text-align: left;
-
 }
 
 ol {
@@ -100,11 +103,9 @@ a {
     padding-right: 150px;
     text-align: left;
     font-size: 120%;
-    
-
 } 
-form {
 
+form {
     background-color: #798897;
     width: 500px;
     margin: 0 auto;
@@ -123,7 +124,6 @@ form {
     font-weight: 500;
     border-radius: 2px;
     display: flex;
-    
 }
 
 .label_style {
@@ -132,7 +132,6 @@ form {
     clear: both;
     width: 100%;
     float: left;
-    
 }
 
 .submit {
@@ -147,7 +146,6 @@ form {
     border-radius: 2px;
     text-align: center;
     border: 1px solid white;
-
 }
 
 .submit:hover {
@@ -162,3 +160,307 @@ form p {
     margin-right: 5px;
     margin-bottom: 5px;
 }
+
+/* --------- Media queries */
+
+@media (max-width: 807px) {
+    p,ol {
+        font-size: 100%;
+    }
+
+    h1 {
+        font-size: 200%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #menu {
+        font-size: 130%;
+    }
+
+    #image_index_page {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .pre_calculator_area {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .calculator_area {
+        padding-left: 100px;
+        padding-right: 100px;
+        font-size: 100%;
+    } 
+    }
+
+    @media (max-width: 660px) {
+        p,ol {
+            font-size: 100%;
+        }
+    
+        h1 {
+            font-size: 180%;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        h2 {
+            font-size: 140%;
+        }
+    
+        #menu {
+            font-size: 120%;
+        }
+    
+        #image_index_page {
+            max-width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .pre_calculator_area {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+    
+        .calculator_area {
+            padding-left: 80px;
+            padding-right: 80px;
+            font-size: 100%;
+        } 
+
+        form {
+            width: 460px;
+        }
+
+        .label_style {
+            margin-right: 5px;
+        }
+        }
+
+        @media (max-width: 570px) {
+            p,ol {
+                font-size: 100%;
+            }
+        
+            h1 {
+                font-size: 160%;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+    
+            h2 {
+                font-size: 130%;
+            }
+        
+            #menu {
+                font-size: 110%;
+            }
+        
+            #image_index_page {
+                max-width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            #image_investment_guide_page {
+                max-width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+            }
+        
+            .pre_calculator_area {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+        
+            .calculator_area {
+                padding-left: 60px;
+                padding-right: 60px;
+                font-size: 100%;
+            } 
+    
+            form {
+                width: 460px;
+            }
+    
+            .label_style {
+                margin-right: 5px;
+            }
+            }
+
+            @media (max-width: 500px) {
+                p,ol {
+                    font-size: 100%;
+                }
+            
+                h1 {
+                    font-size: 150%;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+        
+                h2 {
+                    font-size: 120%;
+                }
+            
+                #menu {
+                    font-size: 110%;
+                }
+            
+                #image_index_page {
+                    max-width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                }
+    
+                #image_investment_guide_page {
+                    max-width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                }
+            
+                .pre_calculator_area {
+                    padding-left: 50px;
+                    padding-right: 50px;
+                }
+            
+                .calculator_area {
+                    padding-left: 50px;
+                    padding-right: 50px;
+                    font-size: 100%;
+                } 
+        
+                form {
+                    width: 460px;
+                }
+        
+                .label_style {
+                    margin-right: 5px;
+                }
+                }
+                @media (max-width: 460px) {
+                    p,ol {
+                        font-size: 90%;
+                    }
+                
+                    h1 {
+                        font-size: 140%;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+            
+                    h2 {
+                        font-size: 110%;
+                    }
+                
+                    #menu {
+                        font-size: 100%;
+                    }
+                
+                    #image_index_page {
+                        max-width: 100%;
+                        height: auto;
+                        display: flex;
+                        justify-content: center;
+                    }
+        
+                    #image_investment_guide_page {
+                        max-width: 100%;
+                        height: auto;
+                        display: flex;
+                        justify-content: center;
+                    }
+                
+                    .pre_calculator_area {
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                
+                    .calculator_area {
+                        padding-left: 30px;
+                        padding-right: 30px;
+                        font-size: 90%;
+                    } 
+            
+                    form {
+                        width: 440px;
+                    }
+            
+                    .label_style {
+                        margin-right: 5px;
+                        font-size: 90%;
+                    }
+
+                    .submit {
+                        font-size: 90%;
+                    }
+                    }
+            
+                    @media (max-width: 370px) {
+                        p,ol {
+                            font-size: 90%;
+                        }
+                    
+                        h1 {
+                            font-size: 130%;
+                            margin-left: 10px;
+                            margin-right: 10px;
+                        }
+                
+                        h2 {
+                            font-size: 100%;
+                        }
+                    
+                        #menu {
+                            font-size: 90%;
+                        }
+                    
+                        #image_index_page {
+                            max-width: 100%;
+                            height: auto;
+                            display: flex;
+                            justify-content: center;
+                        }
+            
+                        #image_investment_guide_page {
+                            max-width: 100%;
+                            height: auto;
+                            display: flex;
+                            justify-content: center;
+                        }
+                    
+                        .pre_calculator_area {
+                            padding-left: 20px;
+                            padding-right: 20px;
+                        }
+                    
+                        .calculator_area {
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            font-size: 90%;
+                        } 
+                
+                        form {
+                            width: 340px;
+                        }
+                
+                        .label_style {
+                            margin-right: 5px;
+                            font-size: 90%;
+                        }
+    
+                        .submit {
+                            font-size: 90%;
+                        }
+                        }
