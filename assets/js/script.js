@@ -1,14 +1,13 @@
+
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "calculate_1") {
-                //console.log('button 1');
-                calculateMonthlyInvestments()
+                calculateMonthlyInvestments();
             }else if (this.getAttribute("data-type") === "calculate_2") {
-                //console.log('button 2');
-                calculateRetirementFundAmount() 
+                calculateRetirementFundAmount(); 
             } else {
                 alert(`Unknown data tpye: ${data-type}`);
                 throw `Unknown data type: ${data-type}. Abborting!`;
@@ -27,17 +26,27 @@ document.addEventListener("DOMContentLoaded", function() {
 function calculateMonthlyInvestments() {
     let moneyInRetirement = parseInt(document.getElementById('money_in_retirement').value);
     let yearsUntilRetirement = parseInt(document.getElementById('years_until_retirement').value);
-    let interestRate = document.getElementById('interest_rate').value;
+    let interestRate = parseFloat(document.getElementById('interest_rate').value);
 
-    let monthlyInvestments = (moneyInRetirement * (interestRate/12)) / (((1+ interestRate/12)**(yearsUntilRetirement*12))-1);
+    let monthlyInvestments = Math.floor((moneyInRetirement * (interestRate/12)) / (((1+ interestRate/12)**(yearsUntilRetirement*12))-1));
     
     let html = `
         <p>You should invest each month ${monthlyInvestments} units of currency, in order to
-        have in ${yearsUntilRetirement} years ${moneyInRetirement} amount of your retirement fund. Check
+        have in ${yearsUntilRetirement} years ${moneyInRetirement} units of currency of your retirement fund. Check
         the next tab for more info.</p>
     `;
-
+    
+    
+    if (yearsUntilRetirement === 1) {
+        html = `
+        <p>You should invest each month ${monthlyInvestments} units of currency, in order to
+        have in ${yearsUntilRetirement} year ${moneyInRetirement} units of currency of your retirement fund. Check
+        the next tab for more info.</p>
+    `;
+    } 
+    
     let response = document.getElementById('response1');
+  
     response.innerHTML= html;
 
 }
@@ -48,22 +57,28 @@ function calculateMonthlyInvestments() {
  */
 
 function calculateRetirementFundAmount() {
-
-    let monthlyInvestmets2 = parseInt(document.getElementById('monthly_investments').value);
+  
+    let monthlyInvestments2 = parseInt(document.getElementById('monthly_investments').value);
     let yearsUntilRetirement2 = parseInt(document.getElementById('years_until_retirement_2').value);
     let interestRate2 = parseFloat(document.getElementById('interest_rate_2').value);
 
-    let moneyInRetirement2 = ((((1 + (interestRate2/12))**(yearsUntilRetirement2 * 12))-1) / (interestRate2/12)) * monthlyInvestmets2;
+    let moneyInRetirement2 = Math.floor(((((1 + (interestRate2/12))**(yearsUntilRetirement2 * 12))-1) / (interestRate2/12)) * monthlyInvestments2);
     
-    let html = `
-        <p>If you invest each month ${monthlyInvestments2} units of currency for ${yearsUntilRetirement} years,
-        you could probably have ${moneyInRetirement2} amount in your retirement fund. Check
+    let html_2 = `
+        <p>If you invest each month ${monthlyInvestments2} units of currency for ${yearsUntilRetirement2} years,
+        you could probably have ${moneyInRetirement2} units of currency in your retirement fund. Check
         the next tab for more info.</p>
     `;
 
-    let response = document.getElementById('response2');
-    response.innerHTML= html;
+    if (yearsUntilRetirement2 === 1) {
+        html_2 = `
+        <p>If you invest each month ${monthlyInvestments2} units of currency for ${yearsUntilRetirement2} year,
+        you could probably have ${moneyInRetirement2} units of currency in your retirement fund. Check
+        the next tab for more info.</p>
+    `;
+    }
 
-}
+    let response2 = document.getElementById('response2');
+    response2.innerHTML= html_2;
 
-
+} 
