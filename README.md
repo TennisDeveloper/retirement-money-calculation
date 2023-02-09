@@ -1,108 +1,66 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## Retirement Planning
 
-Welcome Barbora Fabianova,
+Welcome, Retirement Planning Website Users,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Retirement Planning is a website where users can plan their retirement money. Everything starts with the management of the monthly budget. When users check their monthly expenses and savings, they can better plan the amount of future investments. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Users have two calculators available. Either they select their desired retirement fund amount and calculate the necessary monthly investments for it. Or maybe users better know how much they can afford to invest on a monthly basis and calculate the approximate amount of money in retirement.
 
-## Gitpod Reminders
+Users can select attributes such as the number of years until retirement or the average interest rate achieved on their investments.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+On the investment guide page, users can read about possibilities of how to achieve their retirement fund, which investment product to use.
 
-`python3 -m http.server`
+![website_screenshots, the screenshots of the website showing the responsive elements](/assets/images/am_i_responsive.png)
 
-A blue button should appear to click: _Make Public_,
+## Existing Features
 
-Another blue button should appear to click: _Open Browser_.
+1. Navigation Bar
+    - The full responsive navigation bar includes links to Retirement Planning page (Home page) and Investment Guide page and is identical on both pages to allow for easy navigation.
+    - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+ ![menu_bar, the navigation menu image](/assets/images/menu_bar.png)
 
-A blue button should appear to click: _Make Public_,
+2. The Landing Page Image
+    - The landing includes a photograph of the beach view with the ocean. This should evocate the retirement options for people, who have invested during their whole life and can afford to travel to nice places.
+    
+![ocean, the landing page image](/assets/images/ocean.jpg)
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+3. Calculator Section
+    - This section enables users to calculate either their necessary monthly investments based on their desired retirement fund. Or based on their monthly invested amount of money the probable retirement fund. Users can select the attributes from the drop-down list. When they press the Calculate button, the result of the calculation appears in the form.
 
-To log into the Heroku toolbelt CLI:
+![calculator_section, two retirement planning calculators](/assets/images/calculator_section.png)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+4. Investment Guide Page
+    - This page enables users to get more information on how to achieve the desired retirement fund. It provides a lot of advice from the best investors.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+5. Features Left to Implement
+    - Currency selection
+    - Monthly budget distribution to expenses and savings
 
-------
 
-## Release History
+## Validator Testing
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+1. No HTML errors were found when passing through the *[W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftennisdeveloper.github.io%2Fretirement-money-calculation%2F)*.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+2. No CSS errors were found when passing through the *[Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftennisdeveloper.github.io%2Fretirement-money-calculation%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=cs)*.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+3. No JS errors were found when passing through the *[JSHint Validator](https://jshint.com/)*.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+4. Retirement Planning page was tested for accessibility and showed good results:
+![performance_testing, lighthouse test in developer tools](/assets/images/performance_testing.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Deployment
+The site was deployed to GitHub pages. 
+The live link can be found here - https://tennisdeveloper.github.io/retirement-money-calculation/
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The steps to deploy are as follows:
+1. In the GitHub repository navigate to the Settings tab.
+2. From the source section drop-down menu, select the Main Branch.
+3. Once the main branch has been selected, the page provided the link to the live website.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Credits
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- Content
+    - Instructions on implementing the event listener were taken from the *[Love Math](https://tennisdeveloper.github.io/love-maths/)* website. 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
