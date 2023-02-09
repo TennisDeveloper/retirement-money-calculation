@@ -25,6 +25,20 @@ document.addEventListener("DOMContentLoaded", function() {
  * achieve desired amount of money in retirement.
  */
 function calculateMonthlyInvestments() {
+    let moneyInRetirement = parseInt(document.getElementById('money_in_retirement').value);
+    let yearsUntilRetirement = parseInt(document.getElementById('years_until_retirement').value);
+    let interestRate = document.getElementById('interest_rate').value;
+
+    let monthlyInvestments = (moneyInRetirement * (interestRate/12)) / (((1+ interestRate/12)**(yearsUntilRetirement*12))-1);
+    
+    let html = `
+        <p>You should invest each month ${monthlyInvestments} units of currency, in order to
+        have in ${yearsUntilRetirement} years ${moneyInRetirement} amount of your retirement fund. Check
+        the next tab for more info.</p>
+    `;
+
+    let response = document.getElementById('response1');
+    response.innerHTML= html;
 
 }
 
@@ -34,7 +48,22 @@ function calculateMonthlyInvestments() {
  */
 
 function calculateRetirementFundAmount() {
+
+    let monthlyInvestmets2 = parseInt(document.getElementById('monthly_investments').value);
+    let yearsUntilRetirement2 = parseInt(document.getElementById('years_until_retirement_2').value);
+    let interestRate2 = parseFloat(document.getElementById('interest_rate_2').value);
+
+    let moneyInRetirement2 = ((((1 + (interestRate2/12))**(yearsUntilRetirement2 * 12))-1) / (interestRate2/12)) * monthlyInvestmets2;
     
+    let html = `
+        <p>If you invest each month ${monthlyInvestments2} units of currency for ${yearsUntilRetirement} years,
+        you could probably have ${moneyInRetirement2} amount in your retirement fund. Check
+        the next tab for more info.</p>
+    `;
+
+    let response = document.getElementById('response2');
+    response.innerHTML= html;
+
 }
 
 
