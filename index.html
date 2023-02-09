@@ -44,7 +44,80 @@
     <!--Following div contains form where user could select the attributes for calculation of his/her retirement money-->
     <div class="calculator_area">
         <form>
+            <label for="money_in_retirement" class="label_style">How much money do you need in retirement? </label>
+            <select name="money_in_retirement" id="money_in_retirement" class="select_option">
+                <option value="100000">100k</option>
+                <option value="250000">250k</option>
+                <option value="500000">500k</option>
+                <option value="750000">750k</option>
+                <option value="1000000">1M</option>
+                <option value="2000000">2M</option>
+                <option value="3000000">3M</option>
+                <option value="4000000">4M</option>
+                <option value="5000000">5M</option>
+                <option value="6000000">6M</option>
+                <option value="7000000">7M</option>
+                <option value="8000000">8M</option>
+                <option value="9000000">9M</option>
+                <option value="10000000">10M</option>
+                <option value="15000000">15M</option>
+                <option value="20000000">20M</option>
+                <option value="30000000">30M</option>
+                <option value="50000000">50M</option>
+                <option value="100000000">100M</option>
+            </select>
 
+            <label for="years_until_retirement" class="label_style">How many years do you have until retirement? </label>
+            <select name="years_until_retirement" id="years_until_retirement" class="select_option">
+                <option value="1">1</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+                <option value="45">45</option>
+                <option value="50">50</option>
+                <option value="55">55</option>
+                <option value="60">60</option>
+                <option value="65">65</option>
+                <option value="70">70</option>
+                <option value="75">75</option>
+            </select>
+
+            <label for="interest_rate" class="label_style">What is the expected average interest rate 
+                you could achieve with your investments?
+                 </label>
+            <select name="interest_rate" id="interest_rate" class="select_option">
+                <option value="1%">1%</option>
+                <option value="2%">2%</option>
+                <option value="3%">3%</option>
+                <option value="4%">4%</option>
+                <option value="5%">5%</option>
+                <option value="6%">6%</option>
+                <option value="7%">7%</option>
+                <option value="8%">8%</option>
+                <option value="9%">9%</option>
+                <option value="10%">10%</option>
+                <option value="12%">12%</option>
+                <option value="15%">15%</option>
+                <option value="20%">20%</option>
+                <option value="30%">30%</option>
+                <option value="40%">40%</option>
+                <option value="50%">50%</option>
+                <option value="60%">60%</option>
+                <option value="80%">80%</option>
+                <option value="100%">100%</option>
+            </select>
+
+            <button class="submit">Calculate</button>
+            
+            <!--Response for the calculation will go here-->
+            <div id="response1">
+
+            </div>
         </form>
 
     </div>
@@ -57,9 +130,84 @@
 
     
 
+    <!--Following div contains form where user could select the attributes for calculation of his/her retirement money-->
     <div class="calculator_area">
         <form>
+            <label for="monthly_investments" class="label_style">How much money you can invest monthly until retirement? </label>
+            <select name="monthly_investments" id="monthly_investments" class="select_option">
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="250">250</option>
+                <option value="500">500</option>
+                <option value="750">750</option>
+                <option value="1000">1k</option>
+                <option value="2000">2k</option>
+                <option value="3000">3k</option>
+                <option value="4000">4k</option>
+                <option value="5000">5k</option>
+                <option value="6000">6k</option>
+                <option value="7000">7k</option>
+                <option value="8000">8k</option>
+                <option value="9000">9k</option>
+                <option value="10000">10k</option>
+                <option value="15000">15k</option>
+                <option value="20000">20k</option>
+                <option value="30000">30k</option>
+                <option value="50000">50k</option>
+                <option value="100000">100k</option>
+            </select>
+
+            <label for="years_until_retirement" class="label_style">How many years do you have until retirement? </label>
+            <select name="years_until_retirement" id="years_until_retirement" class="select_option">
+                <option value="1">1</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+                <option value="45">45</option>
+                <option value="50">50</option>
+                <option value="55">55</option>
+                <option value="60">60</option>
+                <option value="65">65</option>
+                <option value="70">70</option>
+                <option value="75">75</option>
+            </select>
+
+            <label for="interest_rate" class="label_style">What is the expected average interest rate 
+                you could achieve with your investments?
+                 </label>
+            <select name="interest_rate" id="interest_rate" class="select_option">
+                <option value="1%">1%</option>
+                <option value="2%">2%</option>
+                <option value="3%">3%</option>
+                <option value="4%">4%</option>
+                <option value="5%">5%</option>
+                <option value="6%">6%</option>
+                <option value="7%">7%</option>
+                <option value="8%">8%</option>
+                <option value="9%">9%</option>
+                <option value="10%">10%</option>
+                <option value="12%">12%</option>
+                <option value="15%">15%</option>
+                <option value="20%">20%</option>
+                <option value="30%">30%</option>
+                <option value="40%">40%</option>
+                <option value="50%">50%</option>
+                <option value="60%">60%</option>
+                <option value="80%">80%</option>
+                <option value="100%">100%</option>
+            </select>
+
+            <button class="submit">Calculate</button>
             
+            <!--Response for the calculation will go here-->
+            <div id="response1">
+
+            </div>
         </form>
 
     </div>

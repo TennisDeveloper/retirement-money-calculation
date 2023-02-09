@@ -90,3 +90,74 @@ ol {
 a {
     color: #FFE4E3;
 }
+
+/* calculator area */
+
+.calculator_area {
+    display: flex;
+    padding-bottom: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+    text-align: left;
+    font-size: 120%;
+    
+
+} 
+form {
+
+    background-color: #798897;
+    width: 500px;
+    margin: 0 auto;
+    border-top: 3px solid #52572A;
+    border-bottom: 2px solid #52572A;
+    clear: both;
+}
+
+.select_option {
+    width: 30%;
+    height: 25px;
+    margin: 10px 0 20px 10px;
+    background-color: white;
+    font-family: 'Luxurious Roman', sans-serif;
+    color:  #2F4858;
+    font-weight: 500;
+    border-radius: 2px;
+    display: flex;
+    
+}
+
+.label_style {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    clear: both;
+    width: 100%;
+    float: left;
+    
+}
+
+.submit {
+    width: 20%;
+    height: 25px;
+    margin: 10px 0 20px 10px;
+    background-color: #ABAD9A;
+    font-family: 'Luxurious Roman', sans-serif;
+    font-size: 100%;
+    color: #2F4858;
+    font-weight: 500;
+    border-radius: 2px;
+    text-align: center;
+    border: 1px solid white;
+
+}
+
+.submit:hover {
+    background-color: #2F4858;
+    color: #ABAD9A;
+    border: 1px solid #ABAD9A;
+}
+
+form p {
+    font-size: 100%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
