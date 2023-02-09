@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Retirement planning calculator, which helps to think about
+    the necessary amount of monthly investments in order to achieve the desired retirement fund.">
+    <meta name="keywords"
+        content="retirement planning, index funds, monthly investments for retirement, portfolio managers, retirement calculator, annuity calculator ">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Retirement Planning</title>
 </head>
+
 <body>
     <header>
         <nav id="menu">
             <ul>
-                <li><a href="index.html" aria-label="Go to 'Retirement Planning' page." class="active">Retirement Planning</a></li>
-                <li><a href="investment_guide.html" aria-label="Go to 'Investment Guide' page.">Investment Guide</a></li>
+                <li><a href="index.html" aria-label="Go to 'Retirement Planning' page." class="active">Retirement
+                        Planning</a></li>
+                <li><a href="investment_guide.html" aria-label="Go to 'Investment Guide' page.">Investment Guide</a>
+                </li>
             </ul>
         </nav>
         <h1>Retirement Money Calculation</h1>
     </header>
     <!--Main page image-->
-    <div >
-        <img  src="assets/images/ocean.jpg" alt="Beautiful ocean view at the beach." id="image_index_page">
+    <div>
+        <img src="assets/images/ocean.jpg" alt="Beautiful ocean view at the beach." id="image_index_page">
 
     </div>
     <!--Following 3 divs contain text and ordered list.-->
     <div class="pre_calculator_area">
         <p>How much money do you wish to have in retirement?
-            People who retire comfortably do repeat the  following 3 steps:</p>
+            People who retire comfortably do repeat the following 3 steps:</p>
     </div>
 
     <div class="pre_calculator_area">
-            <ol >
-                <li>they earn money</li>
-                <li>they save</li>
-                <li>they invest saved money with profit</li>
-            </ol>
+        <ol>
+            <li>they earn money</li>
+            <li>they save</li>
+            <li>they invest saved money with profit</li>
+        </ol>
     </div>
 
     <div class="pre_calculator_area">
@@ -67,7 +75,8 @@
                 <option value="100000000">100M</option>
             </select>
 
-            <label for="years_until_retirement" class="label_style">How many years do you have until retirement? </label>
+            <label for="years_until_retirement" class="label_style">How many years do you have until retirement?
+            </label>
             <select name="years_until_retirement" id="years_until_retirement" class="select_option">
                 <option value="1">1</option>
                 <option value="5">5</option>
@@ -87,9 +96,9 @@
                 <option value="75">75</option>
             </select>
 
-            <label for="interest_rate" class="label_style">What is the expected average interest rate 
+            <label for="interest_rate" class="label_style">What is the expected average interest rate
                 you could achieve with your investments?
-                 </label>
+            </label>
             <select name="interest_rate" id="interest_rate" class="select_option">
                 <option value="0.01">1%</option>
                 <option value="0.02">2%</option>
@@ -112,8 +121,8 @@
                 <option value="1">100%</option>
             </select>
 
-            <button data-type="calculate_1" class="submit">Calculate</button>
-            
+            <button data-type="calculate_1" class="submit"><strong>Calculate</strong></button>
+
             <!--Response for the calculation will go here-->
             <div id="response1">
 
@@ -125,15 +134,17 @@
 
     <!--Following div contains text.-->
     <div class="pre_calculator_area">
-        <p >Or let's have a look at your retirement fund from a different angle. Do you know how much you can afford to invest monthly? Let's calculate your retirement fund amount based on your monthly investments now!</p>
+        <p>Or let's have a look at your retirement fund from a different angle. Do you know how much you can afford to
+            invest monthly? Let's calculate your retirement fund amount based on your monthly investments now!</p>
     </div>
 
-    
+
 
     <!--Following div contains form where user could select the attributes for calculation of his/her retirement money-->
     <div class="calculator_area">
         <form onsubmit="event.preventDefault()" id="calculator_area_2">
-            <label for="monthly_investments" class="label_style">How much money you can invest monthly until retirement? </label>
+            <label for="monthly_investments" class="label_style">How much money you can invest monthly until retirement?
+            </label>
             <select name="monthly_investments" id="monthly_investments" class="select_option">
                 <option value="50">50</option>
                 <option value="100">100</option>
@@ -157,7 +168,8 @@
                 <option value="100000">100k</option>
             </select>
 
-            <label for="years_until_retirement_2" class="label_style">How many years do you have until retirement? </label>
+            <label for="years_until_retirement_2" class="label_style">How many years do you have until retirement?
+            </label>
             <select name="years_until_retirement_2" id="years_until_retirement_2" class="select_option">
                 <option value="1">1</option>
                 <option value="5">5</option>
@@ -177,9 +189,9 @@
                 <option value="75">75</option>
             </select>
 
-            <label for="interest_rate_2" class="label_style">What is the expected average interest rate 
+            <label for="interest_rate_2" class="label_style">What is the expected average interest rate
                 you could achieve with your investments?
-                 </label>
+            </label>
             <select name="interest_rate_2" id="interest_rate_2" class="select_option">
                 <option value="0.01">1%</option>
                 <option value="0.02">2%</option>
@@ -202,8 +214,8 @@
                 <option value="1.00">100%</option>
             </select>
 
-            <button data-type="calculate_2" class="submit">Calculate</button>
-            
+            <button data-type="calculate_2" class="submit"><strong>Calculate</strong></button>
+
             <!--Response for the calculation will go here-->
             <div id="response2">
 
@@ -212,8 +224,7 @@
 
     </div>
 
-
-
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
