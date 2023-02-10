@@ -1,3 +1,45 @@
+/**
+ * This functionality let user to put username in order to proceed.
+ * If user enters username, then he is able to see the main-page section.
+ * If user enters "space" then he is not able to proceed.
+ */
+
+let userForm = document.getElementById("user_form");
+let mainPage = document.getElementById("main_page");
+let mainPageInvestmentGuide = document.getElementById('main_investment_guide_page');
+let userSection = document.getElementById('user_section');
+
+let welcomeUsername = document.getElementById('welcome_username');
+
+
+function validateUsername(username) {
+
+    if (username.trim() == "" ) {
+        alert("Enter your name");
+        return false;
+    }
+}
+
+
+userForm.addEventListener("submit", function(event){
+      event.preventDefault();
+      const username = userForm[0].value;
+      if (validateUsername(username)=== false) {
+        mainPage.style.display = "none";
+        mainPageInvestmentGuide.style.display = "none";
+        userSection.style.display = "block";
+      } else {
+        mainPage.style.display = "block";
+        mainPageInvestmentGuide.style.display = "block";
+        userSection.style.display = "none";
+        welcomeUsername.innerText =  `Welcome! ${username}`
+      };
+      
+})
+
+/**
+ * This functionality adds event listeners to the buttons
+ */
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
 
@@ -18,16 +60,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+
 /**
  * Calculates how much money the investor should invest on a monthly basis in order to
  * achieve desired amount of money in retirement.
  */
+
 function calculateMonthlyInvestments() {
     let moneyInRetirement = parseInt(document.getElementById('money_in_retirement').value);
     let yearsUntilRetirement = parseInt(document.getElementById('years_until_retirement').value);
     let interestRate = parseFloat(document.getElementById('interest_rate').value);
 
-    let monthlyInvestments = Math.floor((moneyInRetirement * (interestRate / 12)) / (((1 + interestRate / 12) ** (yearsUntilRetirement * 12)) - 1));
+    let monthlyInvestments = Math.ceil((moneyInRetirement * (interestRate / 12)) / (((1 + interestRate / 12) ** (yearsUntilRetirement * 12)) - 1));
 
     let moneyInRetirementFormatted = Intl.NumberFormat().format(moneyInRetirement);
     let monthlyInvestmentsFormatted = Intl.NumberFormat().format(monthlyInvestments);
@@ -35,7 +80,7 @@ function calculateMonthlyInvestments() {
     let html = `
         <p>You should invest each month ${monthlyInvestmentsFormatted} units of currency, in order to
         have in ${yearsUntilRetirement} years ${moneyInRetirementFormatted} units of currency of your retirement fund. Check
-        the next tab for more info.</p>
+        the <a href="investment_guide.html" aria-label="Go to 'Investment Guide' page.">Investment Guide</a> tab for more info.</p>
     `;
 
 
@@ -43,7 +88,7 @@ function calculateMonthlyInvestments() {
         html = `
         <p>You should invest each month ${monthlyInvestmentsFormatted} units of currency, in order to
         have in ${yearsUntilRetirement} year ${moneyInRetirementFormatted} units of currency of your retirement fund. Check
-        the next tab for more info.</p>
+        the <a href="investment_guide.html" aria-label="Go to 'Investment Guide' page.">Investment Guide</a> tab for more info.</p>
     `;
     }
 
@@ -51,6 +96,16 @@ function calculateMonthlyInvestments() {
 
     response.innerHTML = html;
 
+    let myArray = [];
+
+    for (i=1; i<=yearsUntilRetirement; i++) {
+        for (j=1; j<13; j++) {
+            
+                let myRow = {year:i, month:j,totalMonths:(yearsUntilRetirement * 12 - j),monthlyInvestments,interestRate };
+                myArray.push(myRow);
+        }
+    }
+    console.log(myArray);
 }
 
 /**
@@ -64,7 +119,7 @@ function calculateRetirementFundAmount() {
     let yearsUntilRetirement2 = parseInt(document.getElementById('years_until_retirement_2').value);
     let interestRate2 = parseFloat(document.getElementById('interest_rate_2').value);
 
-    let moneyInRetirement2 = Math.floor(((((1 + (interestRate2 / 12)) ** (yearsUntilRetirement2 * 12)) - 1) / (interestRate2 / 12)) * monthlyInvestments2);
+    let moneyInRetirement2 = Math.ceil(((((1 + (interestRate2 / 12)) ** (yearsUntilRetirement2 * 12)) - 1) / (interestRate2 / 12)) * monthlyInvestments2);
 
     let moneyInRetirement2Formatted = Intl.NumberFormat().format(moneyInRetirement2);
     let monthlyInvestments2Formatted = Intl.NumberFormat().format(monthlyInvestments2);
@@ -72,18 +127,19 @@ function calculateRetirementFundAmount() {
     let html_2 = `
         <p>If you invest each month ${monthlyInvestments2Formatted} units of currency for ${yearsUntilRetirement2} years,
         you could probably have ${moneyInRetirement2Formatted} units of currency in your retirement fund. Check
-        the next tab for more info.</p>
+        the <a href="investment_guide.html" aria-label="Go to 'Investment Guide' page.">Investment Guide</a> tab for more info.</p>
     `;
 
     if (yearsUntilRetirement2 === 1) {
         html_2 = `
         <p>If you invest each month ${monthlyInvestments2Formatted} units of currency for ${yearsUntilRetirement2} year,
         you could probably have ${moneyInRetirement2Formatted} units of currency in your retirement fund. Check
-        the next tab for more info.</p>
+        the <a href="investment_guide.html" aria-label="Go to 'Investment Guide' page.">Investment Guide</a> tab for more info.</p>
     `;
     }
 
     let response2 = document.getElementById('response2');
     response2.innerHTML = html_2;
+
 
 }

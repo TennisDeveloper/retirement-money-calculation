@@ -38,6 +38,13 @@ h2 {
 
 #menu {
     font-size: 150%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#welcome_username{
+    margin-right: 10px;
 }
 
 #menu li {
@@ -482,4 +489,40 @@ form p {
     .submit {
         font-size: 90%;
     }
+}
+
+
+
+#main_page{
+    display: none;
+}
+
+#main_investment_guide_page {
+    display: none;
+}
+
+#user_form{
+    background: #80808047;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+}
+
+#username{
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
+
+#user_form button{
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    width: fit-content;
+    align-self: center;
+}
+
+#user_section h2{
+    text-align: center;
+    margin-bottom: 1rem;
 }

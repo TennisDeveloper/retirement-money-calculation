@@ -62,5 +62,5 @@ The steps to deploy are as follows:
 ## Credits
 
 - Content
-    - Instructions on implementing the event listener were taken from the *[Love Math](https://tennisdeveloper.github.io/love-maths/)* website. 
+    - Instructions on implementing the event listener were taken from the *[Love Maths](https://tennisdeveloper.github.io/love-maths/)* website. 
 
