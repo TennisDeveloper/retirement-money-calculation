@@ -304,6 +304,19 @@ form p {
 
     #user_form {
         width: 460px;
+        padding: 2rem;
+    }
+
+    #username {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
+
+    #user_form button {
+        margin-bottom: 1.8rem;
+        padding: 1rem 1.5rem;
+        font-size: 100%;
     }
 }
 
@@ -363,6 +376,19 @@ form p {
 
     #user_form {
         width: 440px;
+        padding: 1rem;
+    }
+
+    #username {
+        margin-bottom: 1.3rem;
+        padding: 0.9rem;
+        font-size: 1.1rem;
+    }
+
+    #user_form button {
+        margin-bottom: 1.6rem;
+        padding: 1rem 1.4rem;
+        font-size: 90%;
     }
 }
 
@@ -422,6 +448,19 @@ form p {
 
     #user_form {
         width: 440px;
+        padding: 0.5rem;
+    }
+
+    #username {
+        margin-bottom: 1.1rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    #user_form button {
+        margin-bottom: 1.4rem;
+        padding: 1rem 1.1rem;
+        font-size: 90%;
     }
 }
 
@@ -485,7 +524,20 @@ form p {
     }
 
     #user_form {
-        width: 440px;
+        width: 400px;
+        padding: 0.5rem;
+    }
+
+    #username {
+        margin-bottom: 1rem;
+        padding: 0.3rem;
+        font-size: 1rem;
+    }
+
+    #user_form button {
+        margin-bottom: 1.1rem;
+        padding: 0.8rem 0.8rem;
+        font-size: 90%;
     }
 }
 
@@ -549,7 +601,21 @@ form p {
     }
 
     #user_form {
-        width: 340px;
+        width: 300px;
+        padding: 0.5rem;
+    }
+
+    #username {
+        margin-bottom: 1rem;
+        padding: 0.2rem;
+        font-size: 1rem;
+
+    }
+
+    #user_form button {
+        margin-bottom: 0.9rem;
+        padding: 0.7rem 0.7rem;
+        font-size: 90%;
     }
 }
 
