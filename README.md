@@ -53,6 +53,9 @@ On the investment guide page, users can read about possibilities of how to achie
 4. Retirement Planning page was tested for accessibility and showed good results:
 ![performance_testing, lighthouse test in developer tools](/assets/images/performance_testing.png)
 
+## Bugs
+There is an unsolved bug in the case of re-loading the index page after the user has already submitted his/her username. The form appears again, which should not be the case.
+
 ## Deployment
 The site was deployed to GitHub pages. 
 The live link can be found here - https://tennisdeveloper.github.io/retirement-money-calculation/

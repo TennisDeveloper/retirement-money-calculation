@@ -28,14 +28,21 @@ let welcomeUsername = document.getElementById('welcome_username');
 userForm.addEventListener('submit', function(event){
     event.preventDefault();
     const username = userForm[0].value;
+    localStorage.setItem(username,userForm[0].value);
     validateUsername(username)
-    mainPage.style.display = "block";
-    userSection.style.display = "none";
-    welcomeUsername.innerText =  `Welcome! ${username}`
+
+    if (localStorage ) {
+        mainPage.style.display = "block";
+        userSection.style.display = "none";
+        welcomeUsername.innerText =  `Welcome! ${username}`;
+    } else {
+        mainPage.style.display = "none";
+        userSection.style.display = "block";
+    }
+    
     }
     
 );
-
 
 
 /**
