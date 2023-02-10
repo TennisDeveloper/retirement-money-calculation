@@ -4,7 +4,7 @@ Welcome, Retirement Planning Website Users,
 
 Retirement Planning is a website where users can plan their retirement money. Everything starts with the management of the monthly budget. When users check their monthly expenses and savings, they can better plan the amount of future investments. 
 
-Users have two calculators available. Either they select their desired retirement fund amount and calculate the necessary monthly investments for it. Or maybe users better know how much they can afford to invest on a monthly basis and calculate the approximate amount of money in retirement.
+Users after they enter their username have two calculators available. Either they select their desired retirement fund amount and calculate the necessary monthly investments for it. Or maybe users better know how much they can afford to invest on a monthly basis and calculate the approximate amount of money in retirement.
 
 Users can select attributes such as the number of years until retirement or the average interest rate achieved on their investments.
 
@@ -21,9 +21,12 @@ On the investment guide page, users can read about possibilities of how to achie
  ![menu_bar, the navigation menu image](/assets/images/menu_bar.png)
 
 2. The Landing Page Image
-    - The landing includes a photograph of the beach view with the ocean. This should evocate the retirement options for people, who have invested during their whole life and can afford to travel to nice places.
+    - The user is prompted first to write his username to be able to see the main page.
+
+ ![username, the landing page username](/assets/images/username.png)   
+    - The landing includes the username of the user and a photograph of the beach view with the ocean. This should evocate the retirement options for people, who have invested during their whole life and can afford to travel to nice places.
     
-![ocean, the landing page image](/assets/images/ocean.jpg)
+![ocean, the landing page image](/assets/images/landing_page_image.png)
 
 
 3. Calculator Section

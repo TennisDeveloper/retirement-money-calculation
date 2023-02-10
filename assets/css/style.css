@@ -35,6 +35,10 @@ h2 {
     text-align: left;
 }
 
+h3 {
+    color: #F3EED9;
+    font-size: 160%;
+}
 
 #menu {
     font-size: 150%;
@@ -43,12 +47,11 @@ h2 {
     justify-content: space-between;
 }
 
-#welcome_username{
+#welcome_username {
     margin-right: 10px;
 }
 
 #menu li {
-
     list-style-type: none;
     display: inline-block;
     font-weight: 500;
@@ -172,6 +175,45 @@ form p {
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 5px;
+}
+
+/*user form styling when the index page is loaded */
+
+#main_page{
+    display: none;
+}
+
+#user_form {
+    background: #80808047;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    border-radius: 2px;
+}
+
+#username {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 2px;
+    text-align: center;
+    font-family: 'Luxurious Roman', sans-serif;
+}
+
+#user_form button {
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    width: fit-content;
+    align-self: center;
+    border-radius: 2px;
+    font-family: 'Luxurious Roman', sans-serif;
+    font-size: 100%;
+}
+
+#user_section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 /* --------- Media queries */
@@ -492,37 +534,3 @@ form p {
 }
 
 
-
-#main_page{
-    display: none;
-}
-
-#main_investment_guide_page {
-    display: none;
-}
-
-#user_form{
-    background: #80808047;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    padding: 4rem;
-}
-
-#username{
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    font-size: 1.5rem;
-}
-
-#user_form button{
-    margin-bottom: 2rem;
-    padding: 1rem 2rem;
-    width: fit-content;
-    align-self: center;
-}
-
-#user_section h2{
-    text-align: center;
-    margin-bottom: 1rem;
-}

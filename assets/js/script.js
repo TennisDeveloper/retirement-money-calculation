@@ -4,38 +4,39 @@
  * If user enters "space" then he is not able to proceed.
  */
 
-let userForm = document.getElementById("user_form");
-let mainPage = document.getElementById("main_page");
-let mainPageInvestmentGuide = document.getElementById('main_investment_guide_page');
+
+let userForm = document.getElementById('user_form');
+let mainPage = document.getElementById('main_page');
 let userSection = document.getElementById('user_section');
 
 let welcomeUsername = document.getElementById('welcome_username');
 
 
-function validateUsername(username) {
+ function validateUsername(username) {
 
     if (username.trim() == "" ) {
         alert("Enter your name");
+        mainPage.style.display = "none";
+        userSection.style.display = "block";
+
         return false;
-    }
+    } 
+    
+
 }
 
+userForm.addEventListener('submit', function(event){
+    event.preventDefault();
+    const username = userForm[0].value;
+    validateUsername(username)
+    mainPage.style.display = "block";
+    userSection.style.display = "none";
+    welcomeUsername.innerText =  `Welcome! ${username}`
+    }
+    
+);
 
-userForm.addEventListener("submit", function(event){
-      event.preventDefault();
-      const username = userForm[0].value;
-      if (validateUsername(username)=== false) {
-        mainPage.style.display = "none";
-        mainPageInvestmentGuide.style.display = "none";
-        userSection.style.display = "block";
-      } else {
-        mainPage.style.display = "block";
-        mainPageInvestmentGuide.style.display = "block";
-        userSection.style.display = "none";
-        welcomeUsername.innerText =  `Welcome! ${username}`
-      };
-      
-})
+
 
 /**
  * This functionality adds event listeners to the buttons
@@ -47,17 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "calculate_1") {
                 calculateMonthlyInvestments();
+                
             } else if (this.getAttribute("data-type") === "calculate_2") {
-                calculateRetirementFundAmount();
-            } else {
-                alert(`Unknown data type: ${data-type}`);
-                throw `Unknown data type: ${data-type}. Abborting!`;
-            }
-        });
-    }
-
-
-});
+                calculateRetirementFundAmount(); 
+               
+                } 
+        })}});
+      
 
 
 
@@ -96,16 +93,6 @@ function calculateMonthlyInvestments() {
 
     response.innerHTML = html;
 
-    let myArray = [];
-
-    for (i=1; i<=yearsUntilRetirement; i++) {
-        for (j=1; j<13; j++) {
-            
-                let myRow = {year:i, month:j,totalMonths:(yearsUntilRetirement * 12 - j),monthlyInvestments,interestRate };
-                myArray.push(myRow);
-        }
-    }
-    console.log(myArray);
 }
 
 /**
