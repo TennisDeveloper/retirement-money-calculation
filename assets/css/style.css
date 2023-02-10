@@ -301,6 +301,10 @@ form p {
     .label_style {
         margin-right: 5px;
     }
+
+    #user_form {
+        width: 460px;
+    }
 }
 
 @media (max-width: 570px) {
@@ -356,6 +360,10 @@ form p {
     .label_style {
         margin-right: 5px;
     }
+
+    #user_form {
+        width: 440px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -410,6 +418,10 @@ form p {
 
     .label_style {
         margin-right: 5px;
+    }
+
+    #user_form {
+        width: 440px;
     }
 }
 
@@ -471,6 +483,10 @@ form p {
     .submit {
         font-size: 90%;
     }
+
+    #user_form {
+        width: 440px;
+    }
 }
 
 @media (max-width: 370px) {
@@ -530,6 +546,10 @@ form p {
 
     .submit {
         font-size: 90%;
+    }
+
+    #user_form {
+        width: 340px;
     }
 }
 
